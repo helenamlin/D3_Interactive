@@ -1,0 +1,118 @@
+/* Container for all charts */
+.chart-container {
+    margin: 10px auto; 
+    max-width: 1500px; 
+    margin-bottom: 20px;
+}
+
+.chart-container h2 {
+    color: #333; 
+}
+
+.chart-container p {
+    margin-bottom: 10px;
+}
+
+/* Individual chart containers */
+#barChart,
+#scatterplot,
+#chart1Container,
+#chart2Container {
+    width: calc(45% - 10px); /* Adjusting width slightly less than 50% to account for margin */
+    box-sizing: border-box; /* Ensuring padding and border are included in the width */
+    padding: 0 5px; /* Adding padding to separate the two charts */
+}
+
+/* Additional styling for better spacing and alignment */
+h2, h3, p {
+    margin-bottom: 20px; /* Add space between headings and paragraphs */
+}
+
+.part-container h2 {
+    color: #6074db; /* Set color for h2 within .part-container to blue */
+}
+
+/* Container for all parts */
+.part-container {
+    margin-bottom: 20px;
+}
+
+/* Container for charts within parts 1 and 3 */
+.charts-container {
+    display: flex; /* Set to flex */
+    justify-content: space-between; /* Distribute items evenly */
+    flex-wrap: wrap; /* Enable wrapping */
+}
+
+/* Part 1 and Part 3 charts side by side */
+#part1,
+#additionalCharts {
+    width: 100%; /* Adjust width to fit within the parent container */
+    margin-bottom: 10px; /* Add some bottom margin */
+}
+
+/* Individual chart containers within Part 3 */
+#chart1Container,
+#chart2Container {
+    width: calc(50% - 10px); /* Adjusting width to take up half of the available space with spacing */
+    box-sizing: border-box; /* Ensuring padding and border are included in the width */
+    padding: 0 5px; /* Adding padding to separate the two sections */
+}
+
+/* Update the styles for the lines */
+.line {
+    fill: none; 
+    stroke-width: 2; 
+}
+
+/* Adjust the colors for max and min temperature lines */
+.line-temp-max {
+    stroke: orangered; 
+}
+
+.line-temp-min {
+    stroke: blue; /* Set the color for the min temperature line */
+}
+
+/* Additional styling for charts */
+.dot {
+    fill: steelblue;
+    transition: all 0.2s;
+}
+
+.highlighted {
+    fill: red;
+    stroke-width: 2px;
+    opacity: 0.7;
+}
+
+.unhighlighted {
+    opacity: 0.5;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.legend {
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 5px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}

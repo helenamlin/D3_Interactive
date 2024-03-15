@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization with D3.js</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <!-- Part 1: Top Half Section -->
+    <div id="topHalf" class="chart-container">
+        <!-- Part 1: Top Half Section -->
+        <div id="part1" class="part-container">
+            <h2 style="color: darkpink !important;">Part 1 & Part 2</h2>
+            <p>In Part 1, the hovering/clicking function is employed. When hovering over the bar chart and the line graph, a popup displaying data values is shown. </p>
+            <p>In Part 2, a dropdown control panel option is utilized to modify the configuration of the chart. This dropdown enables users to switch the scatterplot display from depicting the correlation between atmospheric pressure and dewpoint temperature to showcasing atmospheric pressure and visibility.</p>
+            <!-- Empty line -->
+            <div id="part1Charts" class="charts-container">
+                <!-- Sub-section 1: Bar Chart Container -->
+                <div id="barChart" class="chart-container">
+                    <h2>Monthly Precipitation</h2>
+                    <p>This barchart illustrates the aggregated monthly precipitation in Atlanta from 2020 to 2022.</p>
+                </div>
+                <!-- Sub-section 2: Scatterplot Container -->
+                <div id="scatterplot" class="chart-container">
+                    <h2>Pressure vs. Dewpoint</h2>
+                    <p>This scatterplot investigates the correlation between atmospheric pressure and dewpoint temperature (atmospheric pressure and visibility) in Atlanta during the 2020-2022 period. Additionally, it visualizes the temperature range difference in color and the precipitation amount in size.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Part 2: Line Graph Section -->
+    <div id="lineGraph" class="chart-container">
+        <div id="part2" class="part-container">
+            <br> <!-- Empty line -->
+            <!-- Line Graph Container -->
+            <div id="lineGraphContainer">
+                <h2>Max and Min Temperature Over Time</h2>
+                <p>This line graph visualizes the maximum and minimum temperatures in Atlanta over the three-year period (2020-2022), illustrating temperature trends.</p>
+                <!-- Line Graph SVG will be appended here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Part 3: Additional Charts Section -->
+    <div id="additionalCharts" class="chart-container">
+        <div id="part3" class="part-container">
+            <h2>Part 3</h2>
+            <p>In Part 3, the scatterplots representing the fluctuations of dewpoint and temperature over time are linked together through brushing and linking functionality. </p>
+            <br> <!-- Empty line -->
+            <!-- Sub-section 1: Dewpoint over Time Chart Container -->
+            <div id="chart1Container" class="chart-container">
+                <h2>Dewpoint over Time</h2>
+                <p>This chart displays the trend of dewpoint over time.</p>
+                <div id="chart1" class="chart"></div>
+            </div>
+
+            <!-- Sub-section 2: Temperature Range over Time Chart Container -->
+            <div id="chart2Container" class="chart-container">
+                <h2>Temperature Range over Time</h2>
+                <p>This chart illustrates the variation in temperature range over time.</p>
+                <div id="chart2" class="chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <!-- Include your JavaScript file -->
+    <script src="charts.js"></script>
+</body>
+</html>
+
